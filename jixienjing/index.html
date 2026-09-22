@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="机械女警-赛博朋克风格机械女警图鉴与设定集。探索未来都市中的机械女警形象、机械改造技术、赛博义体与正义执法体系。">
+    <meta name="keywords" content="机械女警,赛博朋克,机械改造,未来都市,正义执法,义体">
+    <title>机械女警-未来都市正义执法与机械改造图鉴</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #00f3ff;
+            --secondary-color: #ff0055;
+            --bg-dark: #050510;
+            --bg-panel: #0a0a1a;
+            --text-main: #e0e0e0;
+            --text-muted: #8892b0;
+            --border-color: #1f2a40;
+            --font-stack: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, var(--primary-color), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: rgba(5, 5, 16, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: '';
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(5, 5, 16, 0.7), var(--bg-dark)), 
+                        url('https://picsum.photos/seed/cyberpunkcity/1920/1080') center/cover no-repeat;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-color);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+        }
+
+        .btn-secondary {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-color);
+            color: white;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+        }
+
+        /* Concept Section */
+        .concept {
+            padding: 80px 0;
+            background: var(--bg-dark);
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .concept-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .concept-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .concept-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: var(--bg-panel);
+            padding: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .feature-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .concept-visual {
+            position: relative;
+        }
+
+        .concept-visual img {
+            width: 100%;
+            border-radius: 4px;
+            filter: grayscale(20%) contrast(1.1);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Character Showcase */
+        .showcase {
+            padding: 80px 0;
+            background: var(--bg-panel);
+        }
+
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
+            color: var(--bg-dark);
+            border-color: var(--primary-color);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-color);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-specs {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .spec-item span {
+            display: block;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* Tech Specs Section */
+        .tech-specs {
+            padding: 80px 0;
+            background: var(--bg-dark);
+        }
+
+        .specs-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .spec-box {
+            background: linear-gradient(145deg, #0f1020, #0a0a1a);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 2px solid var(--secondary-color);
+            text-align: center;
+        }
+
+        .spec-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .spec-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .spec-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: var(--bg-panel);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item.active .faq-question::before {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background: #020205;
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            color: #444;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+            .concept-grid, .specs-container {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">MECHA POLICE</div>
+            <nav>
+                <ul>
+                    <li><a href="#concept" class="active">核心概念</a></li>
+                    <li><a href="#showcase">角色图鉴</a></li>
+                    <li><a href="#specs">机体规格</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>机械女警<br><span style="color: var(--primary-color);">正义的钢铁化身</span></h1>
+                <p>在霓虹闪烁的未来都市，机械女警是维护秩序的最后一道防线。融合尖端义体技术与执法智慧，她们在数据流与代码中穿梭，守护着人类的安宁。</p>
+                <div class="hero-btns">
+                    <a href="#showcase" class="btn">查看图鉴</a>
+                    <a href="#concept" class="btn btn-secondary">了解设定</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="concept" class="concept">
+            <div class="container">
+                <h2 class="section-title">核心概念</h2>
+                <p class="section-subtitle">机械女警：人机结合的执法新形态</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-text">
+                        <h2>超越肉体的极限</h2>
+                        <p>机械女警并非单纯的机器人，而是经过高度改造的人类精英。她们保留了人类的直觉与情感，同时获得了钢铁般的体魄与数据化的感官。</p>
+                        <p>在高度犯罪化的未来都市，传统的警力已无法应对日益复杂的犯罪网络。机械女警通过植入神经接口，实现了毫秒级的反应速度与全息战术分析能力。</p>
+                        
+                        <div class="concept-features">
+                            <div class="feature-item">
+                                <h4>战术分析</h4>
+                                <p>实时战场数据流</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>超负荷机动</h4>
+                                <p>城市垂直作战能力</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>义体防御</h4>
+                                <p>多重装甲防护系统</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>神经链接</h4>
+                                <p>群体协同作战网络</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="concept-visual">
+                        <img src="https://picsum.photos/seed/cybermechgirl/600/400" alt="机械女警概念图">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase" class="showcase">
+            <div class="container">
+                <h2 class="section-title">角色图鉴</h2>
+                <p class="section-subtitle">顶尖机械女警档案展示</p>
+
+                <div class="filter-bar">
+                    <button class="filter-btn active">全部</button>
+                    <button class="filter-btn">特警型</button>
+                    <button class="filter-btn">侦察型</button>
+                    <button class="filter-btn">重装型</button>
+                </div>
+
+                <div class="card-grid">
+                    <!-- Card 1 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <span class="card-badge">S级</span>
+                            <img src="https://picsum.photos/seed/police1/400/500" alt="代号：霓虹">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">代号：霓虹</h3>
+                            <p class="card-desc">擅长高机动追捕，腿部装有反重力推进器，可在垂直墙面与空中进行高速追击。</p>
+                            <div class="card-specs">
+                                <div class="spec-item">力量 <span>85%</span></div>
+                                <div class="spec-item">速度 <span>98%</span></div>
+                                <div class="spec-item">防御 <span>60%</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <span class="card-badge">A级</span>
+                            <img src="https://picsum.photos/seed/police2/400/500" alt="代号：泰坦">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">代号：泰坦</h3>
+                            <p class="card-desc">重型防御型执法者，全身覆盖复合装甲，负责人质解救与暴乱镇压任务。</p>
+                            <div class="card-specs">
+                                <div class="spec-item">力量 <span>95%</span></div>
+                                <div class="spec-item">速度 <span>40%</span></div>
+                                <div class="spec-item">防御 <span>99%</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <span class="card-badge">A级</span>
+                            <img src="https://picsum.photos/seed/police3/400/500" alt="代号：幻影">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">代号：幻影</h3>
+                            <p class="card-desc">渗透与侦察专家，具备光学迷彩与声波抑制功能，是潜入犯罪组织的利器。</p>
+                            <div class="card-specs">
+                                <div class="spec-item">力量 <span>50%</span></div>
+                                <div class="spec-item">速度 <span>90%</span></div>
+                                <div class="spec-item">隐秘 <span>100%</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="card">
+                        <div class="card-img-wrapper">
+                            <span class="card-badge">B级</span>
+                            <img src="https://picsum.photos/seed/police4/400/500" alt="代号：裁决">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">代号：裁决</h3>
+                            <p class="card-desc">武器改装专家，双手可更换多种战术模块，适合巷战与近距离交火。</p>
+                            <div class="card-specs">
+                                <div class="spec-item">力量 <span>70%</span></div>
+                                <div class="spec-item">速度 <span>75%</span></div>
+                                <div class="spec-item">火力 <span>92%</span></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Specs Section -->
+        <section id="specs" class="tech-specs">
+            <div class="container">
+                <h2 class="section-title">机体规格</h2>
+                <p class="section-subtitle">标准战术单位技术参数</p>
+                
+                <div class="specs-container">
+                    <div class="spec-box">
+                        <div class="spec-icon">⚡</div>
+                        <h3>神经同步率</h3>
+                        <p>采用第7代神经接口技术，实现脑机双向数据传输，延迟低于0.01毫秒。</p>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-icon">🛡️</div>
+                        <h3>复合装甲</h3>
+                        <p>外层采用纳米陶瓷材料，内层为能量护盾发生器，抗穿透等级极高。</p>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-icon">📡</div>
+                        <h3>全息投影</h3>
+                        <p>具备战术地图投射与模拟影像功能，可瞬间生成假象干扰敌人视线。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题</h2>
+                <p class="section-subtitle">关于机械女警执法体系的解答</p>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">机械女警是否拥有自主意识？</div>
+                        <div class="faq-answer">机械女警的核心逻辑由中央AI辅助，但保留人类警员的道德判断与执法裁量权，由人类指挥官进行最终决策。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如果发生系统故障怎么办？</div>
+                        <div class="faq-answer">所有机械女警均配备紧急物理切断开关，可随时断开神经连接，确保人机分离，防止失控。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">她们如何处理非法义体改造者？</div>
+                        <div class="faq-answer">机械女警携带反制波束与义体抑制器，能精准识别并瘫痪未经授权的非法改装设备。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">是否所有警员都可以进行机械改造？</div>
+                        <div class="faq-answer">并非所有警员都需要改造。机械女警通常选拔自体能素质最强且心理素质最稳定的精英警员。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">加入部队</a>
+                <a href="#">隐私政策</a>
+                <a href="#">联系总署</a>
+            </div>
+            <p class="copyright">&copy; 2077 机械女警特别行动组. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 折叠交互
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(5, 5, 16, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.5)';
+            } else {
+                header.style.background = 'rgba(5, 5, 16, 0.9)';
+                header.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
