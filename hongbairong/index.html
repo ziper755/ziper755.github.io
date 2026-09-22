@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪百榕-著名作家与小说家个人主页</title>
+    <meta name="description" content="洪百榕个人官方网站，收录其最新小说作品、创作历程、文学观点及读者互动专区。">
+    <meta name="keywords" content="洪百榕,小说家,作家,文学作品,洪百榕作品集">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 10%),
+                              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 10%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .hero-btn:hover {
+            background-color: #a93226;
+            transform: translateY(-2px);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--card-bg);
+            padding: 30px 0;
+            margin-top: -40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .book-cover {
+            height: 380px;
+            background-color: #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+
+        .book-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-genre {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .book-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .book-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .book-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .read-btn {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-btn:hover {
+            color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--card-bg);
+            padding: 60px;
+            border-radius: 12px;
+            margin-bottom: 80px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            margin-bottom: 80px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--border-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: white;
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -8px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-bg);
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+
+        .footer-col p {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image {
+                max-width: 100%;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 23px;
+            }
+
+            .left::before, .right::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>洪</span>百榕
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#about">关于作者</a></li>
+                    <li><a href="#works">作品集</a></li>
+                    <li><a href="#timeline">创作历程</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>洪百榕</h1>
+            <p>以笔为剑，刻画时代脉搏；以情动人，书写人性冷暖。探索当代文学的新维度。</p>
+            <a href="#works" class="hero-btn">阅读作品</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">出版长篇小说</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500万+</div>
+                <div class="stat-label">累计发行量</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15年</div>
+                <div class="stat-label">深耕文学创作</div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/hongboyong/400/500" alt="洪百榕肖像">
+                </div>
+                <div class="about-text">
+                    <h3>关于洪百榕</h3>
+                    <p>洪百榕，当代知名作家，以其深刻的社会洞察力和细腻的情感描写著称。多年来，洪百榕一直致力于挖掘平凡生活中的不凡故事，通过文字构建了一个个既真实又充满想象力的文学世界。</p>
+                    <p>他的作品往往扎根于现实，却又超越了现实，探讨人与人之间的关系、个体的命运以及社会变迁中的坚守与妥协。阅读洪百榕的文字，不仅能获得情感上的共鸣，更能引发对生活本质的深层思考。</p>
+                    <p>除了小说创作，洪百榕也积极参与文学评论与公益活动，致力于推动当代文学的发展与普及。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works">
+            <h2 class="section-title">代表作品</h2>
+            <div class="works-grid">
+                
+                <!-- Book 1 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/novel1/300/400" alt="《岁月长歌》封面">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-genre">历史小说 / 长篇</span>
+                        <h3 class="book-title">岁月长歌</h3>
+                        <p class="book-desc">一部跨越半个世纪的家族史诗，记录了三代人在时代洪流中的爱恨情仇与命运沉浮。</p>
+                        <div class="book-meta">
+                            <span>2023年出版</span>
+                            <a href="#" class="read-btn">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 2 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/novel2/300/400" alt="《城市边缘人》封面">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-genre">都市文学 / 散文</span>
+                        <h3 class="book-title">城市边缘人</h3>
+                        <p class="book-desc">聚焦在大城市中奋斗的年轻人，用冷静的笔触描绘他们的迷茫、挣扎与希望。</p>
+                        <div class="book-meta">
+                            <span>2021年出版</span>
+                            <a href="#" class="read-btn">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 3 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/novel3/300/400" alt="《无声的呐喊》封面">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-genre">悬疑推理 / 长篇</span>
+                        <h3 class="book-title">无声的呐喊</h3>
+                        <p class="book-desc">一起看似普通的失踪案，牵扯出人性深处的黑暗与光明，情节跌宕起伏。</p>
+                        <div class="book-meta">
+                            <span>2020年出版</span>
+                            <a href="#" class="read-btn">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Book 4 -->
+                <article class="book-card">
+                    <div class="book-cover">
+                        <img src="https://picsum.photos/seed/novel4/300/400" alt="《雨季不再来》封面">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-genre">青春文学 / 长篇</span>
+                        <h3 class="book-title">雨季不再来</h3>
+                        <p class="book-desc">关于成长、告别与初恋的纯美篇章，唤醒每个人心中那段潮湿而美好的记忆。</p>
+                        <div class="book-meta">
+                            <span>2019年出版</span>
+                            <a href="#" class="read-btn">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="timeline-section">
+            <h2 class="section-title">创作历程</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2008年</span>
+                        <h4>文学启蒙与起步</h4>
+                        <p>开始发表短篇小说，在地方文学刊物崭露头角，确立了现实主义创作基调。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2012年</span>
+                        <h4>首部长篇出版</h4>
+                        <p>出版首部个人长篇小说《城市边缘人》，获得年度新人文学奖提名。</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2016年</span>
+                        <h4>确立文坛地位</h4>
+                        <p>出版历史题材作品《岁月长歌》，销量突破百万册，成为畅销书作家。</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023年</span>
+                        <h4>新作发布与交流</h4>
+                        <p>推出最新力作，并开始在全国多所高校举办文学讲座，分享创作心得。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于洪百榕</h4>
+                    <p>致力于用文字记录时代，用故事温暖人心。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#works">作品列表</a></li>
+                        <li><a href="#about">作者简介</a></li>
+                        <li><a href="#timeline">创作历程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <p>邮箱：contact@hongboyong.com</p>
+                    <p>地址：北京市朝阳区文学创作中心</p>
+                    <p>版权所有 © 2023 洪百榕工作室</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>本网站为洪百榕官方授权展示页面，所有内容仅供学习交流。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
