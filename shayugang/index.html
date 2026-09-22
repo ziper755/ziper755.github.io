@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鲨鱼缸 - 专业水族造景与海洋生物饲养指南</title>
+    <meta name="description" content="鲨鱼缸 - 提供大型海洋生物饲养的专业指南，涵盖海水缸搭建、设备选购、水质管理及鲨鱼品种介绍，打造您的私人深海生态馆。">
+    <meta name="keywords" content="鲨鱼缸, 海水鱼缸, 大型水族箱, 鲨鱼饲养, 水族造景, 海洋生物">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #006994;
+            --secondary-color: #004e70;
+            --accent-color: #00a8cc;
+            --bg-color: #f0f8ff;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 105, 148, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Main Layout */
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Species Showcase */
+        .species-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .species-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .species-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 105, 148, 0.15);
+        }
+
+        .species-img {
+            width: 100%;
+            height: 180px;
+            background-color: #ddd;
+            object-fit: cover;
+        }
+
+        .species-info {
+            padding: 20px;
+        }
+
+        .species-info h4 {
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+        }
+
+        .species-info .tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            background-color: #e6f7ff;
+            color: var(--primary-color);
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .species-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Equipment List */
+        .equipment-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .equip-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .equip-icon {
+            font-size: 1.5rem;
+        }
+
+        .equip-text h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .equip-text p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-top: 60px;
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: "+";
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <span>🦈</span> 鲨鱼缸
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#setup">饲养指南</a></li>
+                <li><a href="#species">品种介绍</a></li>
+                <li><a href="#equipment">设备清单</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <a href="#setup" class="cta-btn">开始饲养</a>
+    </div>
+</header>
+
+<main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>打造您的私人深海生态馆</h1>
+            <p>从鲨鱼缸设计到海水调配，为您提供专业级的大型海洋生物饲养解决方案，让深海巨兽在您的家中安家。</p>
+            <div class="hero-tags">
+                <span class="tag">海水缸</span>
+                <span class="tag">生态造景</span>
+                <span class="tag">生物过滤</span>
+                <span class="tag">活石系统</span>
+            </div>
+            <a href="#setup" class="cta-btn" style="background: white; color: var(--primary-color);">阅读饲养指南</a>
+        </div>
+    </section>
+
+    <!-- Feature Grid -->
+    <section class="features-grid">
+        <article class="feature-card">
+            <div class="feature-icon">🌊</div>
+            <h3>水质管理</h3>
+            <p>掌握氨氮、亚硝酸盐和硝酸盐的控制技巧，确保鲨鱼缸内水质的长期稳定与清洁。</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">🦈</div>
+            <h3>品种选择</h3>
+            <p>详细介绍适合家庭饲养的鲨鱼品种，包括护士鲨、牛鲨及各类小型鲨鱼的选择建议。</p>
+        </article>
+        <article class="feature-card">
+            <div class="feature-icon">⚙️</div>
+            <h3>设备配置</h3>
+            <p>从大型过滤系统到照明设备，科学配置硬件，满足大型水生生物的生存需求。</p>
+        </article>
+    </section>
+
+    <!-- Setup Guide -->
+    <section id="setup" class="guide-section">
+        <div class="section-title">
+            <h2>鲨鱼缸搭建流程</h2>
+            <p>建立稳定的生态循环是成功饲养的关键</p>
+        </div>
+        <div class="guide-steps">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>确定缸体尺寸与位置</h4>
+                    <p>鲨鱼是大型掠食者，成年后体型巨大，建议至少准备 5 吨以上的水体容量。缸体必须放置在承重能力极强的地面，并预留足够的维护通道。</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>建立生物过滤系统</h4>
+                    <p>大型鲨鱼缸必须配备强大的蛋白分离器和机械过滤系统。同时需要引入大量的活石和底砂，培养硝化细菌，构建自然的生物过滤环境。</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>海水调配与沉淀</h4>
+                    <p>使用优质海盐按照科学比例调配海水。新缸水必须经过至少 2-4 周的沉淀和充气过程，去除氯气和杂质，再逐步引入生物。</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>引入生物与驯化</h4>
+                    <p>遵循“先难后易”原则，先引入无脊椎生物建立生态，再引入鱼类。新入缸生物需进行严格的检疫和适应性驯化，避免应激反应。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Species Showcase -->
+    <section id="species">
+        <div class="section-title">
+            <h2>常见鲨鱼品种</h2>
+            <p>适合家庭饲养的海洋鲨鱼推荐</p>
+        </div>
+        <div class="species-grid">
+            <div class="species-card">
+                <img src="https://picsum.photos/seed/shark1/400/300" alt="护士鲨" class="species-img">
+                <div class="species-info">
+                    <span class="tag">夜行性</span>
+                    <h4>护士鲨</h4>
+                    <p>性格温和，适应力强，适合初学者。通常在缸底休息，对食物要求不高。</p>
+                </div>
+            </div>
+            <div class="species-card">
+                <img src="https://picsum.photos/seed/shark2/400/300" alt="黑鳍礁鲨" class="species-img">
+                <div class="species-info">
+                    <span class="tag">活跃</span>
+                    <h4>黑鳍礁鲨</h4>
+                    <p>游动活跃，需要较大的活动空间。对水温变化敏感，需要恒定的环境。</p>
+                </div>
+            </div>
+            <div class="species-card">
+                <img src="https://picsum.photos/seed/shark3/400/300" alt="柠檬鲨" class="species-img">
+                <div class="species-info">
+                    <span class="tag">领地意识</span>
+                    <h4>柠檬鲨</h4>
+                    <p>具有强烈的领地意识，不适合混养。需要极其强大的过滤系统来应对其排泄量。</p>
+                </div>
+            </div>
+            <div class="species-card">
+                <img src="https://picsum.photos/seed/shark4/400/300" alt="豹纹鲨" class="species-img">
+                <div class="species-info">
+                    <span class="tag">观赏性</span>
+                    <h4>豹纹鲨</h4>
+                    <p>体色独特，性格相对温顺。主要生活在底层，对水流要求不高。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment List -->
+    <section id="equipment">
+        <div class="section-title">
+            <h2>核心设备清单</h2>
+            <p>硬件是鲨鱼缸稳定运行的基石</p>
+        </div>
+        <div class="equipment-list">
+            <div class="equip-item">
+                <div class="equip-icon">🧪</div>
+                <div class="equip-text">
+                    <h4>蛋白分离器 (气泡石)</h4>
+                    <p>去除水中的有机物和多余营养物质，防止水质恶化。</p>
+                </div>
+            </div>
+            <div class="equip-item">
+                <div class="equip-icon">❄️</div>
+                <div class="equip-text">
+                    <h4>冷水机</h4>
+                    <p>热带海水缸通常温度较高，需配备强力冷水机控温。</p>
+                </div>
+            </div>
+            <div class="equip-item">
+                <div class="equip-icon">💡</div>
+                <div class="equip-text">
+                    <h4>LED 全光谱灯</h4>
+                    <p>提供模拟自然光照周期，促进珊瑚和藻类的健康生长。</p>
+                </div>
+            </div>
+            <div class="equip-item">
+                <div class="equip-icon">🌊</div>
+                <div class="equip-text">
+                    <h4>强力造流泵</h4>
+                    <p>制造水体循环，防止死角，模拟洋流环境。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="section-title">
+            <h2>常见问题解答</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item active">
+                <div class="faq-question">家里能养鲨鱼吗？需要多大的缸？</div>
+                <div class="faq-answer">
+                    <p>技术上可行，但需要巨大的空间。大多数鲨鱼成年后长度超过 1.5 米，因此建议至少准备 5 吨以上的水体，且必须是专门的海水缸。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">鲨鱼缸的维护难度大吗？</div>
+                <div class="faq-answer">
+                    <p>维护难度较高。相比淡水鱼，海水缸需要控制盐度、温度和水质指标，且大型鱼类的排泄量极大，需要频繁进行水交换和设备清洗。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">哪些鲨鱼适合新手饲养？</div>
+                <div class="faq-answer">
+                    <p>护士鲨和豹纹鲨相对温和，对环境适应力较强，是较为适合新手的入门品种。但即使如此，也必须具备海水养殖经验。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于鲨鱼缸</h4>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">
+                    致力于为海洋生物爱好者提供专业的海水缸饲养知识与资源，推广科学、可持续的水族养殖理念。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#setup">饲养指南</a></li>
+                    <li><a href="#species">品种介绍</a></li>
+                    <li><a href="#equipment">设备选购</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">海水比重计算器</a></li>
+                    <li><a href="#">常见疾病防治</a></li>
+                    <li><a href="#">水族论坛</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 鲨鱼缸指南. 保留所有权利。</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
