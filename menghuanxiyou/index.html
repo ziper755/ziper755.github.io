@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梦幻西游奇经八脉 - 深度经脉系统解析与加点攻略</title>
+    <meta name="description" content="梦幻西游奇经八脉系统全面解析，包含经脉加点路线推荐、属性提升效果、战斗应用策略及不同门派加点指南，助您打造强力角色。">
+    <meta name="keywords" content="梦幻西游, 奇经八脉, 梦幻西游加点, 门派攻略, 玩法技巧">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #5c4b3d;
+            --secondary-color: #8c7b68;
+            --accent-color: #d4af37;
+            --bg-color: #f4f1ea;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: #fff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            background: #e5c14d;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        /* Pathways Section */
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pathway-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #e0e0e0;
+        }
+
+        .pathway-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .pathway-header h3 {
+            font-size: 1.2rem;
+        }
+
+        .pathway-content {
+            padding: 1.5rem;
+        }
+
+        .pathway-content ul {
+            margin-top: 1rem;
+        }
+
+        .pathway-content li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: var(--light-text);
+        }
+
+        .pathway-content li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Strategy Table */
+        .strategy-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+        }
+
+        .strategy-table th, .strategy-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .strategy-table th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .strategy-table tr:hover {
+            background: #faf9f5;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            background: #eee;
+            color: #555;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--light-text);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #2b2420;
+            color: #ccc;
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+
+            .strategy-table {
+                font-size: 0.9rem;
+            }
+
+            .strategy-table th, .strategy-table td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>奇经八脉</span>攻略站
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#overview">系统概览</a></li>
+                    <li><a href="#paths">经脉路线</a></li>
+                    <li><a href="#guide">加点指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>梦幻西游奇经八脉</h1>
+            <p>深度解析经脉系统，掌握属性提升核心。从入门到精通，为您提供最全面的加点路线与战斗策略，助您在梦幻世界中立于不败之地。</p>
+            <a href="#guide" class="hero-btn">查看加点推荐</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="section-title">
+                <h2>什么是奇经八脉？</h2>
+                <p>奇经八脉是梦幻西游角色提升属性的重要途径，通过消耗经脉点数来点亮经脉节点，从而获得属性加成、技能增强或特殊效果。</p>
+            </div>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>属性提升</h3>
+                    <p>点亮经脉节点可永久增加角色的基础属性（如力量、体质、魔力、敏捷、耐力），是角色成长的核心基石。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>技能增强</h3>
+                    <p>部分经脉节点能够提升门派技能的效果，如增加伤害结果、提升治疗量或增强控制能力。</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>特殊效果</h3>
+                    <p>奇经八脉包含独特的被动效果，例如提升防御、增加气血上限、降低受到的伤害等，极大增强生存能力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pathways Section -->
+        <section id="paths" class="section">
+            <div class="section-title">
+                <h2>主流经脉路线推荐</h2>
+                <p>不同门派根据定位不同，适合的经脉路线也大相径庭。以下是目前版本中最主流的加点思路。</p>
+            </div>
+
+            <div class="pathway-grid">
+                <!-- Card 1 -->
+                <div class="pathway-card">
+                    <div class="pathway-header">
+                        <h3>力劈华山流</h3>
+                    </div>
+                    <div class="pathway-content">
+                        <p><strong>适用门派：</strong>狮驼岭、大唐官府</p>
+                        <p><strong>核心思路：</strong>追求极致的物理爆发与点杀能力。</p>
+                        <ul>
+                            <li>主点<strong>狂战士</strong>分支，大幅提升攻击力。</li>
+                            <li>优先点亮<strong>力劈</strong>相关节点，增加对高防御目标的伤害。</li>
+                            <li>利用<strong>连击</strong>节点提升输出频率。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pathway-card">
+                    <div class="pathway-header" style="background-color: #3e7d32;">
+                        <h3>须弥普陀流</h3>
+                    </div>
+                    <div class="pathway-content">
+                        <p><strong>适用门派：</strong>普陀山、无底洞</p>
+                        <p><strong>核心思路：</strong>依靠须弥真言进行法术爆发，兼顾辅助。</p>
+                        <ul>
+                            <li>主点<strong>普度众生</strong>分支，强化治疗与复活。</li>
+                            <li>开启<strong>须弥</strong>天赋，将法术伤害转化为法暴。</li>
+                            <li>搭配<strong>灵动九天</strong>提升全队速度。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pathway-card">
+                    <div class="pathway-header" style="background-color: #b71c1c;">
+                        <h3>神封/神佑流</h3>
+                    </div>
+                    <div class="pathway-content">
+                        <p><strong>适用门派：</strong>方寸山、女儿村</p>
+                        <p><strong>核心思路：</strong>控制战场节奏，保证生存。</p>
+                        <ul>
+                            <li>主点<strong>心剑</strong>或<strong>凝气</strong>分支，强化封印命中率。</li>
+                            <li>利用<strong>神封</strong>节点提高封印成功率。</li>
+                            <li>开启<strong>神佑</strong>节点，濒死时有一定几率复活。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Guide Table -->
+        <section id="guide" class="section">
+            <div class="section-title">
+                <h2>门派加点与经脉搭配指南</h2>
+                <p>针对不同场景（任务、PK、活动）的属性分配建议。</p>
+            </div>
+
+            <table class="strategy-table">
+                <thead>
+                    <tr>
+                        <th>门派</th>
+                        <th>核心定位</th>
+                        <th>任务加点方向</th>
+                        <th>PVP/活动加点方向</th>
+                        <th>推荐经脉分支</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>大唐官府</strong></td>
+                        <td>物理输出</td>
+                        <td>5力/4力1敏 (追求速度)</td>
+                        <td>4力1耐/4力1体 (保证生存)</td>
+                        <td>狂战士 / 力劈华山</td>
+                    </tr>
+                    <tr>
+                        <td><strong>龙宫</strong></td>
+                        <td>法术输出</td>
+                        <td>5魔 / 4魔1耐</td>
+                        <td>5魔 (高法爆) / 4魔1敏 (抢速度)</td>
+                        <td>御守 / 须弥真言</td>
+                    </tr>
+                    <tr>
+                        <td><strong>化生寺</strong></td>
+                        <td>辅助/治疗</td>
+                        <td>4体1敏 / 3体2敏</td>
+                        <td>3体1敏1耐 (高血耐)</td>
+                        <td>金刚怒目 / 普度众生</td>
+                    </tr>
+                    <tr>
+                        <td><strong>魔王寨</strong></td>
+                        <td>法术爆发</td>
+                        <td>5魔</td>
+                        <td>5魔 (高法暴) / 4魔1敏</td>
+                        <td>三昧真火 / 烈火燎原</td>
+                    </tr>
+                    <tr>
+                        <td><strong>五庄观</strong></td>
+                        <td>封印/辅助</td>
+                        <td>3体2敏 / 2体3敏</td>
+                        <td>2体1敏1耐1魔 (封印兼输出)</td>
+                        <td>烟雨剑法 / 灵动九天</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="section-title">
+                <h2>常见问题解答 (FAQ)</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">奇经八脉的点数如何获取？</div>
+                    <div class="faq-answer">
+                        角色等级提升时，系统会自动赠送经脉点数。此外，参与特定的活动（如门派闯关、节日活动）或使用部分道具也可能获得额外的经脉点数。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">可以同时点亮多条经脉路线吗？</div>
+                    <div class="faq-answer">
+                        是的，奇经八脉系统允许玩家在主要分支中选择一条进行深入点亮，同时可以点亮其他分支的节点。但需要注意，每个节点点亮后都需要消耗点数，点数是有限的，需要根据自身需求合理规划。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">经脉点数用光了怎么办？</div>
+                    <div class="faq-answer">
+                        目前经脉点数一旦点亮无法撤销，因此加点前请务必参考攻略。如果点错了，通常只能通过重新规划点数来调整（具体规则视游戏版本更新而定，建议关注官方公告）。
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">新手玩什么门派适合？</div>
+                    <div class="faq-answer">
+                        新手建议从操作简单、容错率高的门派入手。例如<strong>化生寺</strong>（治疗）、<strong>普陀山</strong>（辅助）或<strong>大唐官府</strong>（物理）。这些门派在经脉加点上相对直观，且在团队中需求量大。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>梦幻西游奇经八脉攻略站 - 致力于为玩家提供最准确的门派加点与玩法资讯。</p>
+            <p>本站内容仅供玩家参考，游戏版本更新可能导致部分内容变化，请以游戏内实际数据为准。</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">&copy; 2023 梦幻西游奇经八脉攻略站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的 FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
